@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+	"dev": "nodemon ./index.js",
+	"ui": "browser-sync start --proxy=localhost:8000 --files='**/*.css, **/*.png, **/*.js' --ignore=nodemodules --reload-delay 10 --no-ui --no-notify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+	"browser-sync": "^2.26.7",
+	"nodemon": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "pug": "^3.0.0"
-  }
+	"express": "^4.17.1",
+	"pug": "^3.0.0"
+  },
+  "engines" : {
+	"node" : "14"
+	}
 }
